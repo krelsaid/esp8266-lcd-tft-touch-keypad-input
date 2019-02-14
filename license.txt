@@ -1,7 +1,7 @@
 vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvStartvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 Software License Agreement (FreeBSD License)
 
-Copyright (c) 2019 Khairilsaid(https://github.com/khairilsaid79/esp8266_Tft_keypadfull_demo)
+Copyright (c) 2019 Khairilsaid(https://github.com/khairilsaid79)
 
 All rights reserved.
 
