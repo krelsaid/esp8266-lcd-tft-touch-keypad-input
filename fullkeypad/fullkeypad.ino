@@ -140,7 +140,6 @@ void setup(void) {
   tft.setTextFont(1);
   tft.setTextPadding(0);
   tft.setTextDatum(TL_DATUM); // Reset datum to normal
-  //tft.setTextDatum(MC_DATUM);
   drawkeyboard_alt(0);
   
 }
