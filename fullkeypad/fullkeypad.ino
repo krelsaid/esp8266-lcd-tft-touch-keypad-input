@@ -136,6 +136,11 @@ void setup(void) {
   }
 
   tft.fillScreen(TFT_BLACK);
+  tft.setTextSize(1);
+  //tft.setTextPadding(8);
+  //tft.setTextDatum(TL_DATUM); // Reset datum to normal
+  tft.setTextDatum(MC_DATUM);
+  drawkeyboard_alt(0);
   
 }
 
