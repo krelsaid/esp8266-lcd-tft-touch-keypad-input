@@ -137,9 +137,10 @@ void setup(void) {
 
   tft.fillScreen(TFT_BLACK);
   tft.setTextSize(1);
-  //tft.setTextPadding(8);
-  //tft.setTextDatum(TL_DATUM); // Reset datum to normal
-  tft.setTextDatum(MC_DATUM);
+  tft.setTextFont(1);
+  tft.setTextPadding(0);
+  tft.setTextDatum(TL_DATUM); // Reset datum to normal
+  //tft.setTextDatum(MC_DATUM);
   drawkeyboard_alt(0);
   
 }
@@ -398,7 +399,7 @@ void drawkeyboard_alt(uint8_t sw){
             if(col == 0 ){
                   keypadalt[OFFSET_CLR].initButton(&tft, (KEY_PAD_X+adj_expos) + col * (KEY_PAD_W + KEY_PAD_SPACE_X), KEY_PAD_Y + row * (KEY_PAD_H + KEY_PAD_SPACE_Y) , 
                                 KEY_PAD_W+80, KEY_PAD_H, TFT_WHITE, TFT_GREY, TFT_WHITE,
-                  keyLabel[17], KEY_TEXTSIZE);
+                  keyLabel[10], KEY_TEXTSIZE);
                   keypadalt[OFFSET_CLR].drawButton();
             }
           }
@@ -444,6 +445,7 @@ void drawkeyboard_alt(uint8_t sw){
 //Input Text Box Top Left
 void makeinput_TL(uint16_t _x,uint16_t _y,uint16_t _w,uint16_t _h,String _fs_str,String lbl){
     int _str_len = _w/6;
+    tft.setTextFont(1);
     tft.setCursor(_x, _y-10);
     tft.setTextColor(TFT_WHITE, TFT_BLACK);
     tft.println(lbl);
@@ -459,6 +461,7 @@ void makeinput_BL(uint16_t _x,uint16_t _y,uint16_t _w,uint16_t _h,String _fs_str
     int _pass_y = _lbl_pass_y+10;
 
     int _str_len = _w/6;
+    tft.setTextFont(1);
     tft.setCursor(_x,_lbl_pass_y );
     tft.setTextColor(TFT_WHITE, TFT_BLACK);
     tft.println(lbl);
@@ -473,6 +476,7 @@ void makeinput_TR(uint16_t _x,uint16_t _y,uint16_t _w,uint16_t _h,String _fs_str
   
     int _right_x = _x+_w+20;
     int _str_len = _w/6;
+    tft.setTextFont(1);
     tft.setCursor(_right_x,_y-10 );
     tft.setTextColor(TFT_WHITE, TFT_BLACK);
     tft.println(lbl);
@@ -489,6 +493,7 @@ void makeinput_BR(uint16_t _x,uint16_t _y,uint16_t _w,uint16_t _h,String _fs_str
     int _pass_y = _lbl_pass_y+10;
     int _right_x = _x+_w+20;
     int _str_len = _w/6;
+    tft.setTextFont(1);
     tft.setCursor(_right_x,_lbl_pass_y );
     tft.setTextColor(TFT_WHITE, TFT_BLACK);
     tft.println(lbl);
@@ -510,7 +515,10 @@ void configwifi(uint16_t t_x,uint16_t t_y,boolean pressed, boolean &draw){
     int _right_x = _x+_w+20;
     uint8_t _fn = 0;
     
-    
+    tft.setTextSize(1);
+    tft.setTextFont(1);
+    tft.setTextPadding(0);
+  
   if(draw){
     draw = false;
     
